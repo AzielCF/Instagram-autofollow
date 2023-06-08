@@ -9,7 +9,7 @@ import time
 # Aqui se almacenan los datos del navegador, crea una carpeta e indica su ubicación ("C:Users/User/chrome-data")
 chromeDataPath = 'FOLDER_PATH'
 
-# Aquí indica los nicks de los usuarios que quieras seguir
+# Aquí indica los nicks de los usuarios que quieras seguir (pueden ser cuantos quiera)
 userNicksFollow = ['USER_TAG', 'USER_TAG', 'USER_TAG']
 
 
@@ -45,3 +45,5 @@ for i, userNickFollow in enumerate(userNicksFollow):
     if i < len(userNicksFollow)-1:
         next_url = 'https://www.instagram.com/' + userNicksFollow[i+1]
         driver.execute_script(f"window.location.href='{next_url}'")
+    
+    #driver.quit()
